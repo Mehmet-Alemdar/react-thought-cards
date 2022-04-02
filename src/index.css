@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(255, 244, 230);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.thoughtForm {
+  width: 95%;
+  height:98%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 3px rgba(41, 41, 41, 0.6);
+  background-color: #f33500;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 80%;
+  margin: 1rem 2rem;
+
+}
+
+.formInputTitle {
+  width: 100%;
+  height: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  outline: none;
+}
+.formInputTitle::placeholder{
+  color: rgb(255, 255, 255);
+}
+.form hr {
+  border: 1px solid rgb(255, 232, 202);
+  width: 100%;
+  margin-top: 4rem;
+  position: fixed;
+}
+
+.formTextareaContent {
+  margin-top: 1rem;
+  resize: none;
+  width: 100%;
+  height: 40rem;
+  padding: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+textarea::-webkit-scrollbar {
+  width: 0.3rem;
+}
+textarea::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+}
+textarea::-webkit-scrollbar-thumb {
+  background:rgb(255, 232, 202);
+  border-radius: 5px;
+}
+textarea::placeholder{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.buttonAdd {
+  width: 50%;
+  border: none;
+  height: 2rem;
+  color: rgb(255, 232, 202);
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buttonAdd:hover{
+  width: 65%;
+  color: black;
+  background-color: rgb(255, 232, 202);
+}
+.buttonClose {
+  margin-top: 0.5rem;
+  width: 50%;
+  border: none;
+  height: 2rem;
+  color: rgb(255, 232, 202);
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.buttonClose:hover{
+  width: 65%;
+  color: black;
+  background-color: rgb(255, 232, 202);
+}

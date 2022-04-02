@@ -1,0 +1,214 @@
+.app {
+  font-family: serif;
+}
+
+header {
+  width: 100%;
+  height: 2rem;
+  color: rgb(255, 232, 202);
+  text-align: center;
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+header p {
+  margin: 0.5rem auto;
+  font-size: 1.2rem;
+  color: rgb(255, 232, 202);
+}
+
+.addThoughtButton,
+.buttonUpdateVisible {
+  width: 15rem;
+  height: 3rem;
+  border-radius:50px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.buttonUpdateVisible {
+  grid-area: updateButton;
+
+}
+
+.addThoughtButtonNone {
+  display: none;
+}
+
+.addThoughtButton,
+.buttonUpdateVisible:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.4);
+}
+
+.thoughts {
+  margin: 1rem 1rem 5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.thoughtCard {
+  height: 28rem;
+  max-width: 45rem;
+  min-width: 21rem;
+  margin: 1rem;
+  flex: 2 0 21%;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 3px rgba(240, 54, 0, 0.6);
+  background-color: #f33500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.thoughtCardEdit {
+  width: 99.5%;
+  height:99.5%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px 3px rgba(41, 41, 41, 0.6);
+  background-color: #f33500;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.thoughtCard:hover {
+  background-color: rgb(255, 232, 202);
+  box-shadow: 0 0 15px 3px rgb(231, 196, 156);
+}
+
+.buttonRemove {
+  border: none;
+  width: 5rem;
+  color: rgb(255, 232, 202);
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border-end-start-radius: 5px;
+  border-end-end-radius: 5px;
+}
+.buttonRemove:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.closeButton {
+  border: none;
+  width: 3rem;
+  height: 1.5rem;
+  color: #f33500;
+  background-color: rgb(255, 232, 202);
+  cursor: pointer;
+  position: fixed;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  top: 0px;
+  right: 0px;
+  transition: all 0.2s;
+}
+.closeButton:hover {
+  box-shadow: 0 0 5px 5px rgba(255, 232, 202, 0.2);
+  font-weight: bold;
+}
+.closeButtonNone {
+  display: none;
+}
+
+.cardInputTitle {
+  padding: 0.5rem;
+  margin-top: 0.4rem;
+  text-align: center;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 16px;
+}
+
+.cardInputTitleEdit {
+  grid-area: title;
+  width: 90%;
+  height: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  outline: none;
+  font-size: 16px;
+}
+
+.contentContainer {
+  height: 19rem;
+  text-align: center;
+  margin: 0 0.2rem;
+}
+.contentContainerOpened {
+  grid-area: content;
+  height: 20rem;
+  text-align: center;
+  margin: 0 0.2rem;
+}
+
+.cardInputTextarea {
+  resize: none;
+  width: 90%;
+  height: 90%;
+  padding: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.cardInputTextareaEdit {
+  resize: none;
+  width: 90%;
+  height: 100%;
+  padding: 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+  cursor: pointer;
+  font-size: 15px;
+
+}
+.buttonUpdateInvisible {
+  display: none;
+}
+
+hr {
+  border: 1px solid rgb(255, 232, 202);
+}
+
+@media screen and (max-width:600px) {
+  .thoughtCard {
+    width: 90%;
+  }
+  .addThoughtButton,
+  .buttonUpdateVisible {
+    width: 9rem;
+    height: 2.2rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width:1500px) {
+  .contentContainerOpened {
+    height: 40rem;
+  }
+}
